@@ -8,7 +8,7 @@
     <jsp:useBean id="empsbean" class="hrapp.DataHandler" scope="session"/>
     <%String first_name = request.getParameter("first_name");
 String last_name = request.getParameter("last_name");
-String email = request.getParameter("email");
+String email = request.getParameter("email"); 
 String phone_number = request.getParameter("phone_number");
 String job_id = request.getParameter("job_id");
 Integer salary = new Integer(request.getParameter("salary"));

@@ -9,8 +9,10 @@
     <body>
         <%@ page import="hrapp.DataHandler"%>
          
-            <h2>ACME Co: HR Application</h2>
-        
+             <h2>Oracle Cloud HR Application</h2>
+<img src="http://www.crayon.com/Content/images/logo.jpg">
+<img src="http://www.mfrontiers.com/wp-content/uploads/2015/04/Oracle-Cloud-Logo-1.jpg">
+       
         <h3>Employee Data</h3>
             <form action="employees.jsp">
             <jsp:useBean id="empsbean" class="hrapp.DataHandler" scope="session"/>

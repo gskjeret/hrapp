@@ -230,11 +230,34 @@ public class DataHandler implements Serializable {
         }
     }
 
+    public void closeAll() {
+    if ( rset != null ) {
+    try { rset.close();
+    }
+    catch ( Exception ex ) {}
+    rset = null;
+    }
+    if ( stmt != null ) {
+    try {
+    stmt.close();
+    }
+    catch ( Exception ex ) {}
+    stmt = null;
+    }
+    if ( conn != null ) {
+    try {
+    conn.close();
+    }
+    catch ( Exception ex ) {}
+    conn = null;
+    }
+    }
     public void logException(SQLException ex) {
         while (ex != null) {
             ex.printStackTrace();
             ex = ex.getNextException();
         }
     }
+
 
 }

@@ -34,7 +34,7 @@ public class DataHandler implements Serializable {
 
     public String addEmployeeSP(String first_name, String last_name,
     String email, String phone_number, String job_id,
-    int salary) throws SQLException {
+    int salary)  {
     try {
         getDBConnection();
         sqlString = "begin hr.insert_employee(?,?,?,?,?,?); end;";
@@ -58,7 +58,7 @@ public class DataHandler implements Serializable {
     }
     
     public String addEmployee(String first_name, String last_name, String email, String phone_number, String job_id,
-                              int salary) throws SQLException {
+                              int salary)  {
         try {
             getDBConnection();
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);

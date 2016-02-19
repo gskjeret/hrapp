@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@ page contentType="text/html;charset=windows-1252" import="java.sql.ResultSet"%>
+<%@ page contentType="text/html;charset=utf-8" import="java.sql.ResultSet"%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>

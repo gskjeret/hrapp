@@ -50,10 +50,11 @@ public class DataHandler implements Serializable {
         return "success";
     }
     catch ( SQLException ex ) {
-    System.out.println("Possible source of error: Make sure you have created the stored procedure");
-    logException( ex );
-    return "failure";
+        System.out.println("Possible source of error: Make sure you have created the stored procedure");
+        logException( ex );
+        return "failure";
     }
+        finally {  closeAll();  }
     }
     
     public String addEmployee(String first_name, String last_name, String email, String phone_number, String job_id,

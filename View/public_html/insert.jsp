@@ -10,7 +10,7 @@
 <img src="http://www.crayon.com/Content/images/logo.jpg">
 <img src="http://www.mfrontiers.com/wp-content/uploads/2015/04/Oracle-Cloud-Logo-1.jpg">
          
-        <h3>Insert Employee Record</h3>
+        <h3>Insert New Employee Record</h3>
          
         <form action="insert_action.jsp">
             <jsp:useBean id="empsbean" class="hrapp.DataHandler" scope="session"/>

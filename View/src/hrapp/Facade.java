@@ -3,6 +3,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.jws.Oneway;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+
+@Path("hrapp")
+@WebService
 public class Facade {
 
     private List<Employee> employees;
@@ -22,11 +33,18 @@ public class Facade {
         this.employee = this.employees.get(0);
     }
 
+    @GET
+    @Path("/employees")
+    @WebMethod
     public List<Employee> getEmployees(){
         return this.employees;
     }
 
-    public void addEmployee(Employee employee) {
+    @POST
+    @Path("/employee")
+    @WebMethod
+    @Oneway
+    public void addEmployee(@WebParam(name = "arg0") Employee employee) {
         System.out.println("add employee " + employee);
 
         if(employee != null){
@@ -37,8 +55,11 @@ public class Facade {
                                         , employee.getJobId()
                                         , (int) Math.floor(employee.getSalary()));
         }
-    }        
-    
+    }
+
+    @GET
+    @Path("/employee")
+    @WebMethod
     public Employee getEmployee(){
         return employee;
     }

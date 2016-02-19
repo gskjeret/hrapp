@@ -18,7 +18,7 @@
             Use only JDBC to insert a new record
             <br/>
             <input type="radio" name="useSP" value="true"/>
-            Use a stored procedure called via JDBC to insert a new record
+            Use the stored procedure called via JDBC to insert a new record
             <br/>
             <table>
                 <tr>
